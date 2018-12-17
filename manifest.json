@@ -1,0 +1,26 @@
+{
+    "manifest_version": 2,
+ 
+    "name": "Added",
+    "description": "This extension will add label about added products",
+    "version": "1.0",
+ 
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "https://*/*",
+        "storage"
+    ],
+
+    "content_scripts": [
+    {
+      "matches": ["https://www.amazon.com/*"],
+      "js": ["jquery-3.3.1.min.js", "added.js"]
+    }
+  ]
+
+}
